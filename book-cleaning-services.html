@@ -1,0 +1,951 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://bootswatch.com/5/flatly/bootstrap.css">
+      <link rel="stylesheet" href="https://bootswatch.com/5/flatly/bootstrap.min.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+      <link rel="stylesheet" href="style/additionalStyles.css">
+      <script src="https://bootswatch.com/_vendor/jquery/dist/jquery.min.js"></script>
+      <script src="https://bootswatch.com/_vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+      <link rel="icon" href="img/iClean_Logo_S.png" type="image/gif" sizes="16x16">
+      <title>Book An Appointment</title>
+   </head>
+   <body>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-primary" style ="font-size: 1.15rem;">
+         <div class="container-fluid">
+            <div class="logo-image">
+               <a href="https://icleannb.com/"><img src="img/iClean_Logo_S.png" alt="logo" class="img" style="width: 90px; height: 90px;"></a>
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarColor03">
+               <ul class="navbar-nav me-auto">
+                  <li class="nav-item">
+                     <a class="nav-link active" href="book-cleaning-services">Book Now!</a>
+                  </li>
+                  <!--Dropdown-->
+                  <li class="nav-item dropdown">
+                     <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Cleaning Services</a>
+                     <div class="dropdown-menu">
+                        <a class="dropdown-item" href="maid-services"><img src="img/housekeeping.png" alt="maid" style="width:20px; height: 20px; margin-right: 0.5rem;">Maid Services</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="house-cleaning"><img src="img/house.png" alt="house" style="width:20px; height: 20px; margin-right: 0.5rem;">House Cleaning</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="office-cleaning"><img src="img/office.png" alt="office" style="width:20px; height: 20px; margin-right: 0.5rem;">Office Cleaning</a>                     	 
+                     </div>
+                  </li>
+                  <!--Dropdown-->
+                  <li class="nav-item dropdown">
+                     <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Locations</a>
+                     <div class="dropdown-menu">
+                        <a class="dropdown-item" href="saint-john-cleaning-service">Saint John</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="fredericton-cleaning-service">Fredericton</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="moncton-cleaning-service">Moncton</a>							
+                     </div>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="cleaning-services-gift-cards">Gift Cards</a>
+                  </li>
+               </ul>
+               <ul class="navbar-nav">
+                  <!--FAQ-->
+                  <li class="nav-item">
+                     <a class="nav-link" href="cleaning-services-faq">F.A.Q.<img src="img/question.png" alt="question" class="fade-in" style="width:40px; height: 40px; margin-left:0.5rem; position: relative; top: -3px;"></a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="#">Call Now: 506-378-2364 <img src="img/smartphone.png" alt="phone" class="fade-in" style="width:40px; height: 40px;"></a>
+                  </li>
+               </ul>
+            </div>
+         </div>
+      </nav>
+      <div class="jumbotron">
+         <div class="container">
+            <div class="picture">
+               <h1 style="text-align:center; margin-top: 2rem;" class="display-3">Book a house cleaning with our cleaning services estimator<img src="img/calendar.png" alt="calendar" class="fade-in" 
+                  style="width:65px; height: 65px; margin-left:5px;"></h1>
+               <div class = "container" style="max-width:800px;">
+                  <hr class="my-4">
+                  <h2 style="text-align:center; padding-bottom: 10px;">Let's find out what works best for you!</h2>
+                  <h5 style="text-align:center; padding-bottom: 10px;">We designed this tool to help you get an idea of how much time it might take for our team of cleaning professionals to clean your home.</h5>
+                  <h5 style="text-align:center; padding-bottom: 10px;">Our team will enter your home ready to clean with supplies and tools on hand. This estimator tool will make it faster and easier for us to understand your space and cleaning needs. Please try to be as accurate as possible with the number of rooms, and add any special considerations in the comments section so we can best respond to your request.</h5>
+                  <h5 style="text-align:center; padding-bottom: 10px;">Please be aware late payments may be subject to a small Late Payment fee.</h5>
+                  <hr class="my-4">
+               </div>
+            </div>
+            <div class="row justify-content-center" style=" margin-bottom: 10px;">
+               <div class="card bg-light mb-3" style="max-width: 40rem;">
+                  <div class="card-body">
+                     <h3 class="card-title" style= "text-align: center;">Booking Information</h3>
+                     <h4 class="card-title" style= "text-align: left; padding-top: 1rem; border-top: 1px solid #ff7500;">Contact Information</h4>
+                     <p class="text-muted">This will be used to contact you back to discuss appointments.</p>
+                     <!--form-->
+                     <form method="POST" class="contact-form" id="formInformation">
+                        <div class="form-row" style="display: flex; flex-wrap: wrap; justify-content: center; ">
+                           <div class="form-floating col-12 col-sm-6 col-md-6 col-lg-6" style="padding:5px;">
+                              <input type="text" class="form-control" id="inputFirstName" placeholder="First Name" style="border-color: #3498db;">
+                              <label for="inputFirstName">First Name</label>
+                              <small id="invalidFirstName" class="text-danger" hidden>
+                              Please enter a first name.
+                              </small>
+                           </div>
+                           <div class="form-floating col-12 col-sm-6 col-md-6 col-lg-6" style="padding:5px;">
+                              <input type="text" class="form-control" id="inputLastName" placeholder="Last Name" style="border-color: #3498db;">
+                              <label for="inputLastName">Last Name</label>
+                              <small id="invalidLastName" class="text-danger" hidden>
+                              Please enter a last name.
+                              </small>
+                           </div>
+                        </div>
+                        <!--Second row-->
+                        <div class="form-row" style="display: flex; flex-wrap: wrap; justify-content: center; ">
+                           <div class="form-floating col-12 col-sm-6 col-md-6 col-lg-6" style="padding:5px;">
+                              <input type="text" class="form-control" id="inputEmail" placeholder="Email" style="border-color: #3498db;">
+                              <label for="inputEmail">Email</label>
+                              <small id="invalidEmail" class="text-danger" hidden>
+                              Please enter a valid email.
+                              </small>
+                           </div>
+                           <div class="form-floating col-12 col-sm-6 col-md-6 col-lg-6" style="padding:5px; margin-bottom: 1rem;">
+                              <input type="text" class="form-control" id="inputPhone" placeholder="Phone Number" style="border-color: #3498db;">
+                              <label for="inputPhone">Phone Number</label>
+                              <small id="invalidPhone" class="text-danger" hidden>
+                              Please enter a valid phone number.
+                              </small>
+                           </div>
+                        </div>
+                        <!--Perf contact way-->
+                        <p class="text-muted">Which is your preferred method of contact?</p>
+                        <fieldset>
+                           <div class="btn-group" role="group" style="display: flex; flex-wrap: wrap; padding-bottom: 1.2rem;" aria-label="Basic radio toggle button group">		
+                              <input type="checkbox" class="btn-check" id="emailContact" autocomplete="off">
+                              <label class="btn btn-outline-primary" for="emailContact">Email<img src="img/open-email.png" alt="email" style="margin-left:5px;width: 30px; height: 30px;"></label><br>
+                              <input type="checkbox" class="btn-check" id="phoneContact" autocomplete="off">
+                              <label class="btn btn-outline-primary" for="phoneContact">Phone<img src="img/phone.png" alt="call" style="margin-left:5px; width: 30px; height: 30px;"></label><br>			  
+                              <input type="checkbox" class="btn-check" id="textContact" autocomplete="off">
+                              <label class="btn btn-outline-primary" for="textContact">Text<img src="img/smartphonetext.png" alt="text" style="margin-left:5px;width: 30px; height: 30px;"></label><br>
+                           </div>
+                           <div style="padding-bottom:1rem; text-align:center;" id="invalidContact" hidden>
+                              <small  class="text-danger">
+                              Please select at least one method of contact.
+                              </small>
+                           </div>
+                        </fieldset>
+                        <!--Third row-->
+                        <h4 class="card-title" style= "text-align: left; padding-top: 1rem; border-top: 1px solid #ff7500;">Your Address</h4>
+                        <p class="text-muted">This will give us an idea of the travel time needed to reach your location.</p>
+                        <div class="form-row" style="display: flex; flex-wrap: wrap; justify-content: center;">
+                           <div class="form-floating col-12 col-sm-6 col-md-6 col-lg-6" style="padding:5px;">
+                              <input type="text" class="form-control" id="inputStreet" placeholder="Street Address" style="border-color: #3498db;">
+                              <label for="inputStreet">Street Address</label>
+                              <small id="invalidStreet" class="text-danger" hidden>
+                              Please enter an address.
+                              </small>
+                           </div>
+                           <div class="form-floating col-12 col-sm-6 col-md-6 col-lg-6" style="padding:5px;">
+                              <input type="text" class="form-control" id="inputApart" placeholder="Apartment Number" style="border-color: #3498db;">
+                              <label for="inputApart">Apartment # (Optional)</label>								
+                           </div>
+                        </div>
+                        <!--Fourth row-->
+                        <div class="form-row" style="display: flex; flex-wrap: wrap; padding-bottom: 2rem; justify-content: center;">
+                           <div class="form-group col-12 col-sm-6 col-md-6 col-lg-6" style=" padding:5px;">
+                              <div class="form-floating">
+                                 <select class="form-select" id="inputCity" aria-label="Floating label" style="border-color: #3498db;">
+                                    <option disabled selected value> -Please select a city- </option>
+                                    <option>Moncton</option>
+                                    <option>Saint John</option>
+                                    <option>Fredericton</option>
+                                 </select>
+                                 <label for="inputCity">City</label>
+                              </div>
+                              <small id="invalidCity" class="text-danger" hidden>
+                              Please select a city.
+                              </small>
+                           </div>
+                           <div class="form-floating col-12 col-sm-6 col-md-6 col-lg-6" style="padding:5px;">
+                              <input type="text" class="form-control" id="inputPostal" placeholder="Postal Code" style="border-color: #3498db;">
+                              <label for="inputPostal">Postal Code</label>
+                              <small id="invalidPostal" class="text-danger" hidden>
+                              Please use a valid format (ex. A1A 1A1)
+                              </small>
+                           </div>
+                        </div>
+                        <!--Fifth row-->
+                        <h4 class="card-title" style= "text-align: left; padding-top: 1rem; border-top: 1px solid #ff7500;">Types of Services</h4>
+                        <p class="text-muted">The service that you require.</p>
+                        <div class="btn-group" role="group" style="display: flex; flex-wrap: wrap; padding-bottom: 1.2rem;" aria-label="Basic radio toggle button group">
+                           <div class="container">
+                              <div class="row" style="justify-content: space-around;">
+                                 <div class="col-sm-6">
+                                    <input type="radio" class="btn-check" name="btnradio" id="houseCleaningSelect" onclick="houseCleaning()" autocomplete="off">
+                                    <label class="btn btn-outline-primary" for="houseCleaningSelect" style="width: 100%; margin-bottom: 0.5rem;">House Cleaning <img src="img/house.png" alt="house" style="width: 30px; height: 30px;" class="fade-in"></label>                                                                      
+                                 </div>
+                                 <div class="col-sm-6">						   
+                                    <input type="radio" class="btn-check" name="btnradio" id="officeCleaningSelect" onclick="officeCleaning()" autocomplete="off">
+                                    <label class="btn btn-outline-primary" for="officeCleaningSelect" style="width:100%; margin-bottom: 0.5rem;">Office Cleaning <img src="img/office.png" alt="office" style="width: 30px; height: 30px;" class="fade-in"></label>                                 
+                                 </div>
+                                 <div class="col-sm-6">	
+                                    <input type="radio" class="btn-check"  name="btnradio" id="maidServicesSelect" onclick="maidService()" autocomplete="off">
+                                    <label class="btn btn-outline-primary" for="maidServicesSelect" style="width:100%; margin-bottom: 0.5rem;">Maid Services <img src="img/housekeeping.png" alt="maid" style="width: 30px; height: 30px;" class="fade-in"></label> 
+                                 </div>
+                                 <small id="invalidService" class="text-danger" style="text-align:center;" hidden>
+                                 Please select one of the services.
+                                 </small>
+                              </div>
+                           </div>
+						   	   <!--Cottage check-->
+							 <div style="display: flex; flex-wrap: wrap; width: 100%; justify-content: center; margin-top:1rem;" id ="cottage" on hidden>
+							<p style="margin-right: 1rem;">Is this location a cottage?</p>
+						   <div class="form-check">
+							  <input class="form-check-input" type="radio" name="cottage" id="cottage1" value="No" onclick="updatePrice()" checked>
+							  <label class="form-check-label" for="cottage1" style="margin-right:1rem;">
+								No
+							  </label>
+							</div>
+							<div class="form-check">
+							  <input class="form-check-input" type="radio" name="cottage" id="cottage2" value="Yes" onclick="updatePrice()">
+							  <label class="form-check-label" for="cottage2">
+							   Yes
+							  </label>
+							</div>
+							</div>
+                           <!--House cleaning-->	
+                           <div class="form-row" id ="houseClean" style="display: flex; flex-wrap: wrap; padding-top: 15px; width: 100%; justify-content: center;" hidden>						 
+                              <div class="form-group col-12 col-sm-6 col-md-6 col-lg-6" style=" margin-right: -5px; margin-left: -5px; padding: .375rem .75rem;">
+                                 <div class="form-floating">								
+                                    <select class="form-select" id="bedroomCountHouse" aria-label="Floating label" style="border-color: #3498db;" onchange= "updatePrice()">
+                                       <option disabled selected value> -How many bedrooms?- </option>
+                                       <option>0</option>
+                                       <option>1</option>
+                                       <option>2</option>
+                                       <option>3</option>
+                                       <option>4</option>
+                                       <option>5</option>
+                                       <option>6</option>
+                                       <option>7+</option>
+                                    </select>
+                                    <label for="inputCity">Bedroom</label>
+                                 </div>
+                                 <small id="invalidBedroom" class="text-danger" hidden>
+                                 Please select a bedroom amount.
+                                 </small>
+                              </div>
+                              <div class="form-group col-12 col-sm-6 col-md-6 col-lg-6" style=" margin-right: -5px; margin-left: -5px; padding: .375rem .75rem;">
+                                 <div class="form-floating">
+                                    <select class="form-select" id="bathroomCountHouse" aria-label="Floating label" style="border-color: #3498db;" onchange= "updatePrice()">
+                                       <option disabled selected value> -How many bathrooms?- </option>
+                                       <option>0</option>
+                                       <option>1</option>
+                                       <option>2</option>
+                                       <option>3</option>
+                                       <option>4</option>
+                                       <option>5+</option>
+                                    </select>
+                                    <label for="inputCity">Bathroom</label>
+                                 </div>
+                                 <small id="invalidBathroom" class="text-danger" hidden>
+                                 Please select a bathroom amount.
+                                 </small>								 
+                              </div>
+                              <div class="form-group col-12 col-sm-6 col-md-6 col-lg-6" style=" margin-right: -5px; margin-left: -5px; padding: .375rem .75rem;">
+                                 <div class="form-floating">
+                                    <select class="form-select" id="kitchenCountHouse" aria-label="Floating label" style="border-color: #3498db;" onchange= "updatePrice()">
+                                       <option disabled selected value> -How many kitchens?- </option>
+                                       <option>0</option>
+                                       <option>1</option>
+                                       <option>2</option>
+                                       <option>3</option>
+                                       <option>4</option>
+                                       <option>5+</option>
+                                    </select>
+                                    <label for="inputCity">Kitchen</label>
+                                 </div>
+                                 <small id="invalidKitchen" class="text-danger" hidden>
+                                 Please select a kitchen amount.
+                                 </small>
+                              </div>
+                              <div class="form-group col-12 col-sm-6 col-md-6 col-lg-6" style=" margin-right: -5px; margin-left: -5px; padding: .375rem .75rem; padding-bottom:1rem;">
+                                 <div class="form-floating">
+                                    <select class="form-select" id="commonCountHouse" aria-label="Floating label" style="border-color: #3498db;" onchange= "updatePrice()">
+                                       <option disabled selected value> -How many common areas?- </option>
+                                       <option>0</option>
+                                       <option>1</option>
+                                       <option>2</option>
+                                       <option>3</option>
+                                       <option>4</option>
+                                       <option>5+</option>
+                                    </select>
+                                    <label for="inputCity">Common Area</label>
+                                 </div>
+                                 <small id="invalidCommon" class="text-danger" hidden>
+                                 Please select a common area amount.
+                                 </small>
+                              </div>
+                              <!--Floors/basement-->
+                              <div class="form-group col-12 col-sm-6 col-md-6 col-lg-6" style=" margin-right: -5px; margin-left: -5px; padding: .375rem .75rem; padding-bottom:1rem;">
+                                 <div class="form-floating">
+                                    <select class="form-select" id="floorCount" aria-label="Floating label" style="border-color: #3498db;" onchange= "updatePrice()">
+                                       <option disabled selected value> -House floor count- </option>
+                                       <option>1</option>
+                                       <option>2</option>
+                                       <option>3</option>
+                                       <option>4</option>
+                                    </select>
+                                    <label for="inputCity">Floors</label>
+                                 </div>
+                                 <small id="invalidFloors" class="text-danger" hidden>
+                                 Please select an amount of floors.
+                                 </small>
+                              </div>
+                              <div class="form-group col-12 col-sm-6 col-md-6 col-lg-6" style=" margin-right: -5px; margin-left: -5px; padding: .375rem .75rem; padding-bottom:1rem;">
+                                 <div class="form-floating">
+                                    <select class="form-select" id="basement" aria-label="Floating label" style="border-color: #3498db;" onchange= "updatePrice()">
+                                       <option disabled selected value> -Basement type- </option>
+                                       <option>None</option>
+                                       <option>Unfinished</option>
+                                       <option>Finished</option>
+                                    </select>
+                                    <label for="inputCity">Basement</label>
+                                 </div>
+                                 <small id="invalidBasement" class="text-danger" hidden>
+                                 Please select basement type.
+                                 </small>
+                              </div>
+							   <p class="text-primary" style= "text-align: center; padding-top: 1rem;" id ="selectSize">**Please select the size of each room to help us better estimate our services.**</p>
+                              <div id = "selectorSection">                                
+                                 <!--bedroom1-->
+                                 <div class="btn-group" id ="bedroomOne" onchange="updatePrice()" role="group" aria-label="Basic radio toggle button group" hidden>
+                                    <div class="container" style="width: 500px; margin-bottom:0.5rem;">
+                                       <div class="row">
+                                          <div class="col-lg-4">
+                                             <p style="text-align:center; padding-top:0.4rem;"><u>Bedroom 1:</u></p>
+                                          </div>
+                                          <div class="col-lg-8" style="text-align: center;">									
+                                             <input type="radio" class="btn-check"  name="btnradioCleanNew" id="smallRoom" value="Small" autocomplete="off">
+                                             <label class="btn btn-outline-primary" style="width: 90px;" for="smallRoom" >Small</label>
+                                             <input type="radio" class="btn-check" name="btnradioCleanNew" id="medRoom" value="Medium" autocomplete="off" checked>
+                                             <label class="btn btn-outline-primary" style="width: 90px;" for="medRoom">Medium</label>                                				   
+                                             <input type="radio" class="btn-check"  name="btnradioCleanNew" id="laRoom" value="Large" autocomplete="off">
+                                             <label class="btn btn-outline-primary" style="width: 90px;" for="laRoom" >Large</label>  
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <!--bedroom2-->
+                                 <div class="btn-group" id ="bedroomTwo" onchange="updatePrice()"  role="group" aria-label="Basic radio toggle button group" hidden>
+                                    <div class="container" style="width: 500px; margin-bottom:0.5rem;">
+                                       <div class="row">
+                                          <div class="col-lg-4">
+                                             <p style="text-align:center; padding-top:0.4rem;"><u>Bedroom 2:</u></p>
+                                          </div>
+                                          <div class="col-lg-8" style="text-align: center;">									
+                                             <input type="radio" class="btn-check"  name="btnradioClean1" id="smallRoom1" value="Small" autocomplete="off">
+                                             <label class="btn btn-outline-primary" style="width: 90px;" for="smallRoom1" >Small</label>
+                                             <input type="radio" class="btn-check" style="width: 90px;" name="btnradioClean1" id="medRoom1" value="Medium" autocomplete="off" checked>
+                                             <label class="btn btn-outline-primary" style="width: 90px;" for="medRoom1">Medium</label>                                				   
+                                             <input type="radio" class="btn-check" name="btnradioClean1" id="laRoom1" value="Large" autocomplete="off">
+                                             <label class="btn btn-outline-primary" style="width: 90px;" for="laRoom1" >Large</label>  
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <!--bedroom3-->
+                                 <div class="btn-group" id ="bedroomThree" onchange="updatePrice()"  role="group" aria-label="Basic radio toggle button group" hidden>
+                                    <div class="container" style="width: 500px; margin-bottom:0.5rem;">
+                                       <div class="row">
+                                          <div class="col-lg-4">
+                                             <p style="text-align:center; padding-top:0.4rem;"><u>Bedroom 3:</u></p>
+                                          </div>
+                                          <div class="col-lg-8" style="text-align: center;">									
+                                             <input type="radio" class="btn-check"  name="btnradioClean2" id="smallRoom2" value="Small" autocomplete="off">
+                                             <label class="btn btn-outline-primary" style="width: 90px;" for="smallRoom2" >Small</label>
+                                             <input type="radio" class="btn-check" name="btnradioClean2" id="medRoom2" value="Medium"  autocomplete="off" checked>
+                                             <label class="btn btn-outline-primary" style="width: 90px;" for="medRoom2">Medium</label>                                				   
+                                             <input type="radio" class="btn-check" name="btnradioClean2" id="laRoom2"  value="Large" autocomplete="off">
+                                             <label class="btn btn-outline-primary" style="width: 90px;" for="laRoom2" >Large</label>  
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <!--bedroom4-->
+                                 <div class="btn-group" id ="bedroomFour" onchange="updatePrice()"  role="group" aria-label="Basic radio toggle button group" hidden>
+                                    <div class="container" style="width: 500px; margin-bottom:0.5rem;">
+                                       <div class="row">
+                                          <div class="col-lg-4">
+                                             <p style="text-align:center; padding-top:0.4rem;"><u>Bedroom 4:</u></p>
+                                          </div>
+                                          <div class="col-lg-8" style="text-align: center;">									
+                                             <input type="radio" class="btn-check"  name="btnradioClean3" id="smallRoom3" value="Small" autocomplete="off">
+                                             <label class="btn btn-outline-primary" style="width: 90px;" for="smallRoom3" >Small</label>
+                                             <input type="radio" class="btn-check" name="btnradioClean3" id="medRoom3" value="Medium"  autocomplete="off" checked>
+                                             <label class="btn btn-outline-primary" style="width: 90px;" for="medRoom3">Medium</label>                                				   
+                                             <input type="radio" class="btn-check" name="btnradioClean3" id="laRoom3"  value="Large" autocomplete="off">
+                                             <label class="btn btn-outline-primary" style="width: 90px;" for="laRoom3" >Large</label>  
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <!--bedroom5-->
+                                 <div class="btn-group" id ="bedroomFive" onchange="updatePrice()"  role="group" aria-label="Basic radio toggle button group" hidden>
+                                    <div class="container" style="width: 500px; margin-bottom:0.5rem;">
+                                       <div class="row">
+                                          <div class="col-lg-4">
+                                             <p style="text-align:center; padding-top:0.4rem;"><u>Bedroom 5:</u></p>
+                                          </div>
+                                          <div class="col-lg-8" style="text-align: center;">									
+                                             <input type="radio" class="btn-check"  name="btnradioClean4" id="smallRoom4" value="Small" autocomplete="off">
+                                             <label class="btn btn-outline-primary" style="width: 90px;" for="smallRoom4" >Small</label>
+                                             <input type="radio" class="btn-check" name="btnradioClean4" id="medRoom4" value="Medium"  autocomplete="off" checked>
+                                             <label class="btn btn-outline-primary" style="width: 90px;" for="medRoom4">Medium</label>                                				   
+                                             <input type="radio" class="btn-check" name="btnradioClean4" id="laRoom4"  value="Large" autocomplete="off">
+                                             <label class="btn btn-outline-primary" style="width: 90px;" for="laRoom4" >Large</label>  
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <!--bedroom6-->
+                                 <div class="btn-group" id ="bedroomSix" onchange="updatePrice()"  role="group" aria-label="Basic radio toggle button group" hidden>
+                                    <div class="container" style="width: 500px; margin-bottom:0.5rem;">
+                                       <div class="row">
+                                          <div class="col-lg-4">
+                                             <p style="text-align:center; padding-top:0.4rem;"><u>Bedroom 6:</u></p>
+                                          </div>
+                                          <div class="col-lg-8" style="text-align: center;">									
+                                             <input type="radio" class="btn-check"  name="btnradioClean5" id="smallRoom5" value="Small" autocomplete="off">
+                                             <label class="btn btn-outline-primary" style="width: 90px;" for="smallRoom5" >Small</label>
+                                             <input type="radio" class="btn-check" name="btnradioClean5" id="medRoom5" value="Medium"  autocomplete="off" checked>
+                                             <label class="btn btn-outline-primary" style="width: 90px;" for="medRoom5">Medium</label>                                				   
+                                             <input type="radio" class="btn-check" name="btnradioClean5" id="laRoom5"  value="Large" autocomplete="off">
+                                             <label class="btn btn-outline-primary" style="width: 90px;" for="laRoom5" >Large</label>  
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <!--bathroom1-->
+                                 <div class="btn-group" id ="bathroomOne" onchange="updatePrice()"  role="group" aria-label="Basic radio toggle button group" hidden>
+                                    <div class="container" style="width: 500px; margin-bottom:0.5rem;">
+                                       <div class="row">
+                                          <div class="col-lg-4">
+                                             <p style="text-align:center; padding-top:0.4rem;"><u>Bathroom 1:</u></p>
+                                          </div>
+                                          <div class="col-lg-8" style="text-align: center;">									
+                                             <input type="radio" class="btn-check"  name="btnradioCleanBath" id="smallBath" value="Halfbath" autocomplete="off">
+                                             <label class="btn btn-outline-primary"  style="width: 90px;" for="smallBath" >Halfbath</label>
+                                             <input type="radio" class="btn-check" name="btnradioCleanBath" id="medBath" value="Full" autocomplete="off" checked>
+                                             <label class="btn btn-outline-primary"  style="width: 90px;" for="medBath">Full</label>                                				   
+                                             <input type="radio" class="btn-check" name="btnradioCleanBath" id="laBath" value="Custom" autocomplete="off">
+                                             <label class="btn btn-outline-primary"  style="width: 90px;" for="laBath" >Custom</label>  
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <!--bathroom2-->
+                                 <div class="btn-group" id ="bathroomTwo" onchange="updatePrice()"  role="group" aria-label="Basic radio toggle button group" hidden>
+                                    <div class="container" style="width: 500px; margin-bottom:0.5rem;">
+                                       <div class="row">
+                                          <div class="col-lg-4">
+                                             <p style="text-align:center; padding-top:0.4rem;"><u>Bathroom 2:</u></p>
+                                          </div>
+                                          <div class="col-lg-8" style="text-align: center;">									
+                                             <input type="radio" class="btn-check"  name="btnradioCleanBath1" id="smallBath1" value="Halfbath" autocomplete="off">
+                                             <label class="btn btn-outline-primary" style="width: 90px;" for="smallBath1" >Halfbath</label>
+                                             <input type="radio" class="btn-check" name="btnradioCleanBath1" id="medBath1" value="Full" autocomplete="off" checked>
+                                             <label class="btn btn-outline-primary" style="width: 90px;" for="medBath1">Full</label>                                				   
+                                             <input type="radio" class="btn-check" name="btnradioCleanBath1" id="laBath1" value="Custom" autocomplete="off">
+                                             <label class="btn btn-outline-primary" style="width: 90px;" for="laBath1" >Custom</label>  
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <!--bathroom3-->
+                                 <div class="btn-group" id ="bathroomThree" onchange="updatePrice()"  role="group" aria-label="Basic radio toggle button group" hidden>
+                                    <div class="container" style="width: 500px; margin-bottom:0.5rem;">
+                                       <div class="row">
+                                          <div class="col-lg-4">
+                                             <p style="text-align:center; padding-top:0.4rem;"><u>Bathroom 3:</u></p>
+                                          </div>
+                                          <div class="col-lg-8" style="text-align: center;">									
+                                             <input type="radio" class="btn-check"  name="btnradioCleanBath2" id="smallBath2" value="Halfbath" autocomplete="off">
+                                             <label class="btn btn-outline-primary" style="width: 90px;" for="smallBath2" >Halfbath</label>
+                                             <input type="radio" class="btn-check" name="btnradioCleanBath2" id="medBath2" value="Full" autocomplete="off" checked>
+                                             <label class="btn btn-outline-primary" style="width: 90px;" for="medBath2">Full</label>                                				   
+                                             <input type="radio" class="btn-check" name="btnradioCleanBath2" id="laBath2" value="Custom" autocomplete="off">
+                                             <label class="btn btn-outline-primary" style="width: 90px;" for="laBath2" >Custom</label>  
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <!--bathroom4-->
+                                 <div class="btn-group" id ="bathroomFour" onchange="updatePrice()"  role="group" aria-label="Basic radio toggle button group" hidden>
+                                    <div class="container" style="width: 500px; margin-bottom:0.5rem;">
+                                       <div class="row">
+                                          <div class="col-lg-4">
+                                             <p style="text-align:center; padding-top:0.4rem;"><u>Bathroom 4:</u></p>
+                                          </div>
+                                          <div class="col-lg-8" style="text-align: center;">									
+                                             <input type="radio" class="btn-check"  name="btnradioCleanBath3" id="smallBath3" value="Halfbath" autocomplete="off">
+                                             <label class="btn btn-outline-primary" style="width: 90px;" for="smallBath3" >Halfbath</label>
+                                             <input type="radio" class="btn-check" name="btnradioCleanBath3" id="medBath3" value="Full" autocomplete="off" checked>
+                                             <label class="btn btn-outline-primary" style="width: 90px;" for="medBath3">Full</label>                                				   
+                                             <input type="radio" class="btn-check" name="btnradioCleanBath3" id="laBath3" value="Custom" autocomplete="off">
+                                             <label class="btn btn-outline-primary" style="width: 90px;" for="laBath2" >Custom</label>  
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <!--kitchen1-->
+                                 <div class="btn-group" id ="kitchenOne" onchange="updatePrice()"  role="group" aria-label="Basic radio toggle button group" hidden>
+                                    <div class="container" style="width: 500px; margin-bottom:0.5rem;">
+                                       <div class="row">
+                                          <div class="col-lg-4">
+                                             <p style="text-align:center; padding-top:0.4rem;"><u>Kitchen 1:</u></p>
+                                          </div>
+                                          <div class="col-lg-8" style="text-align: center;">									
+                                             <input type="radio" class="btn-check"  name="btnradioCleanKitch" id="smallKitch" value="Small" autocomplete="off">
+                                             <label class="btn btn-outline-primary" style="width: 90px;" for="smallKitch" >Small</label>
+                                             <input type="radio" class="btn-check" name="btnradioCleanKitch" id="medKitch" value="Medium" autocomplete="off" checked>
+                                             <label class="btn btn-outline-primary" style="width: 90px;" for="medKitch">Medium</label>                                				   
+                                             <input type="radio" class="btn-check" name="btnradioCleanKitch" id="laKitch" value="Large" autocomplete="off">
+                                             <label class="btn btn-outline-primary" style="width: 90px;" for="laKitch" >Large</label>  
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <!--kitchen2-->
+                                 <div class="btn-group" id ="kitchenTwo" onchange="updatePrice()"  role="group" aria-label="Basic radio toggle button group" hidden>
+                                    <div class="container" style="width: 500px; margin-bottom:0.5rem;">
+                                       <div class="row">
+                                          <div class="col-lg-4">
+                                             <p style="text-align:center; padding-top:0.4rem;"><u>Kitchen 2:</u></p>
+                                          </div>
+                                          <div class="col-lg-8" style="text-align: center;">									
+                                             <input type="radio" class="btn-check"  name="btnradioCleanKitch1" id="smallKitch1" value="Small" autocomplete="off">
+                                             <label class="btn btn-outline-primary" style="width: 90px;" for="smallKitch1" >Small</label>
+                                             <input type="radio" class="btn-check" name="btnradioCleanKitch1" id="medKitch1" value="Medium" autocomplete="off" checked>
+                                             <label class="btn btn-outline-primary" style="width: 90px;" for="medKitch1">Medium</label>                                				   
+                                             <input type="radio" class="btn-check" name="btnradioCleanKitch1" id="laKitch1" value="Large" autocomplete="off">
+                                             <label class="btn btn-outline-primary" style="width: 90px;" for="laKitch1" >Large</label>  
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <!--kitchen3-->
+                                 <div class="btn-group" id ="kitchenThree" onchange="updatePrice()"  role="group" aria-label="Basic radio toggle button group" hidden>
+                                    <div class="container" style="width: 500px; margin-bottom:0.5rem;">
+                                       <div class="row">
+                                          <div class="col-lg-4">
+                                             <p style="text-align:center; padding-top:0.4rem;"><u>Kitchen 3:</u></p>
+                                          </div>
+                                          <div class="col-lg-8" style="text-align: center;">									
+                                             <input type="radio" class="btn-check"  name="btnradioCleanKitch2" id="smallKitch2" value="Small" autocomplete="off">
+                                             <label class="btn btn-outline-primary" style="width: 90px;" for="smallKitch2" >Small</label>
+                                             <input type="radio" class="btn-check" name="btnradioCleanKitch2" id="medKitch2" value="Medium" autocomplete="off" checked>
+                                             <label class="btn btn-outline-primary" style="width: 90px;" for="medKitch2">Medium</label>                                				   
+                                             <input type="radio" class="btn-check" name="btnradioCleanKitch2" id="laKitch2" value="Large" autocomplete="off">
+                                             <label class="btn btn-outline-primary" style="width: 90px;" for="laKitch2" >Large</label>  
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <!--kitchen4-->
+                                 <div class="btn-group" id ="kitchenFour" onchange="updatePrice()"  role="group" aria-label="Basic radio toggle button group" hidden>
+                                    <div class="container" style="width: 500px; margin-bottom:0.5rem;">
+                                       <div class="row">
+                                          <div class="col-lg-4">
+                                             <p style="text-align:center; padding-top:0.4rem;"><u>Kitchen 4:</u></p>
+                                          </div>
+                                          <div class="col-lg-8" style="text-align: center;">									
+                                             <input type="radio" class="btn-check"  name="btnradioCleanKitch3" id="smallKitch3" value="Small" autocomplete="off">
+                                             <label class="btn btn-outline-primary" style="width: 90px;" for="smallKitch3" >Small</label>
+                                             <input type="radio" class="btn-check" name="btnradioCleanKitch3" id="medKitch3" value="Medium" autocomplete="off" checked>
+                                             <label class="btn btn-outline-primary" style="width: 90px;" for="medKitch3">Medium</label>                                				   
+                                             <input type="radio" class="btn-check" name="btnradioCleanKitch3" id="laKitch3" value="Large" autocomplete="off">
+                                             <label class="btn btn-outline-primary" style="width: 90px;" for="laKitch2" >Large</label>  
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <!--common1-->
+                                 <div class="btn-group" id ="commonOne" onchange="updatePrice()"  role="group" aria-label="Basic radio toggle button group" hidden>
+                                    <div class="container" style="width: 500px; margin-bottom:0.5rem;">
+                                       <div class="row">
+                                          <div class="col-lg-4">
+                                             <p style="text-align:center; padding-top:0.4rem;"><u>Common 1:</u></p>
+                                          </div>
+                                          <div class="col-lg-8" style="text-align: center;">									
+                                             <input type="radio" class="btn-check"  name="btnradioCleanCommon" id="smallCommon" value="Small" autocomplete="off">
+                                             <label class="btn btn-outline-primary" style="width: 90px;" for="smallCommon" >Small</label>
+                                             <input type="radio" class="btn-check" name="btnradioCleanCommon" id="medCommon" value="Medium" autocomplete="off" checked>
+                                             <label class="btn btn-outline-primary" style="width: 90px;" for="medCommon">Medium</label>                                				   
+                                             <input type="radio" class="btn-check" name="btnradioCleanCommon" id="laCommon" value="Large" autocomplete="off">
+                                             <label class="btn btn-outline-primary" style="width: 90px;" for="laCommon" >Large</label>  
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <!--common2-->
+                                 <div class="btn-group" id ="commonTwo" onchange="updatePrice()"  role="group" aria-label="Basic radio toggle button group" hidden>
+                                    <div class="container" style="width: 500px; margin-bottom:0.5rem;">
+                                       <div class="row">
+                                          <div class="col-lg-4">
+                                             <p style="text-align:center; padding-top:0.4rem;"><u>Common 2:</u></p>
+                                          </div>
+                                          <div class="col-lg-8" style="text-align: center;">									
+                                             <input type="radio" class="btn-check"  name="btnradioCleanCommon1" id="smallCommon1" value="Small" autocomplete="off">
+                                             <label class="btn btn-outline-primary" style="width: 90px;" for="smallCommon1" >Small</label>
+                                             <input type="radio" class="btn-check" name="btnradioCleanCommon1" id="medCommon1" value="Medium" autocomplete="off" checked>
+                                             <label class="btn btn-outline-primary" style="width: 90px;" for="medCommon1">Medium</label>                                				   
+                                             <input type="radio" class="btn-check" name="btnradioCleanCommon1" id="laCommon1" value="Large" autocomplete="off">
+                                             <label class="btn btn-outline-primary" style="width: 90px;" for="laCommon1" >Large</label>  
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <!--common3-->
+                                 <div class="btn-group" id ="commonThree" onchange="updatePrice()"  role="group" aria-label="Basic radio toggle button group" hidden>
+                                    <div class="container" style="width: 500px; margin-bottom:0.5rem;">
+                                       <div class="row">
+                                          <div class="col-lg-4">
+                                             <p style="text-align:center; padding-top:0.4rem;"><u>Common 3:</u></p>
+                                          </div>
+                                          <div class="col-lg-8" style="text-align: center;">									
+                                             <input type="radio" class="btn-check"  name="btnradioCleanCommon2" id="smallCommon2" value="Small" autocomplete="off">
+                                             <label class="btn btn-outline-primary" style="width: 90px;" for="smallCommon2" >Small</label>
+                                             <input type="radio" class="btn-check" name="btnradioCleanCommon2" id="medCommon2" value="Medium" autocomplete="off" checked>
+                                             <label class="btn btn-outline-primary" style="width: 90px;" for="medCommon2">Medium</label>                                				   
+                                             <input type="radio" class="btn-check" name="btnradioCleanCommon2" id="laCommon2" value="Large" autocomplete="off">
+                                             <label class="btn btn-outline-primary" style="width: 90px;" for="laCommon2">Large</label>  
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <!--common4-->
+                                 <div class="btn-group" id ="commonFour" onchange="updatePrice()"  role="group" aria-label="Basic radio toggle button group" hidden>
+                                    <div class="container" style="width: 500px; margin-bottom:0.5rem;">
+                                       <div class="row">
+                                          <div class="col-lg-4">
+                                             <p style="text-align:center; padding-top:0.4rem;"><u>Common 4:</u></p>
+                                          </div>
+                                          <div class="col-lg-8" style="text-align: center;">									
+                                             <input type="radio" class="btn-check"  name="btnradioCleanCommon3" id="smallCommon3" value="Small" autocomplete="off">
+                                             <label class="btn btn-outline-primary" style="width: 90px;" for="smallCommon3" >Small</label>
+                                             <input type="radio" class="btn-check" name="btnradioCleanCommon3" id="medCommon3" value="Medium" autocomplete="off" checked>
+                                             <label class="btn btn-outline-primary" style="width: 90px;" for="medCommon3">Medium</label>                                				   
+                                             <input type="radio" class="btn-check" name="btnradioCleanCommon3" id="laCommon3" value="Large" autocomplete="off">
+                                             <label class="btn btn-outline-primary" style="width: 90px;" for="laCommon3">Large</label>  
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                              <!--Walkthrough needed-->	
+                              <div class="form-row" id ="walkThrough" style="display: flex; flex-wrap: wrap; padding-top: 15px; width: 100%; justify-content: center;" hidden >
+                                 <p class="text-info" style="text-align:center;">**Since your location is large or a cottage, a walkthrough is required.**</p>
+                                 <h5>Walkthrough Required.</h5>
+                              </div>
+                              <!--General text area-->
+                              <p class="text-primary" style= "text-align: center; padding-top: 1rem;">**Please let us know below of anything we need to be aware of before arrival.<br/>For example, do you have a central vac? Do you have pets? Are there any surfaces, be it floors or counter tops, that we need to treat with specifics kinds of products? Etc.**</p>
+                              <div class="form-group col-12 col-sm-12 col-md-12 col-lg-12" style ="padding-bottom:1rem;">						 
+                                 <textarea class="form-control" id="cleaningSpecificsHouse" rows="5"></textarea>
+                              </div>
+                           </div>
+                           <!--Maid Services cleaning-->	
+                           <div class="form-row" id ="maidServices" style="display: flex; flex-wrap: wrap; padding-top: 15px; width: 100%; justify-content: center;" hidden >
+                              <p class="text-info" style="text-align:center;">**Maid services includes extras like grocery shopping and meal preperation. <br> If you only require cleaning, please select House Cleaning.**</p>
+                              <h5>Walkthrough Required.</h5>
+                           </div>
+                           <!--Office clean-->	
+                           <div class="form-row" id ="officeClean" style="display: flex; flex-wrap: wrap; padding-top: 15px; width: 100%; justify-content: center;" hidden >
+                              <!--Third row-->
+                              <h4 class="card-title" style= "text-align: left;">Office Address</h4>
+                              <p class="text-info" style="text-align:center;">**Office cleaning requires an in-person walk through for estimates.**</p>
+                              <div class="form-floating col-12 col-sm-6 col-md-6 col-lg-6" style="padding:5px;">
+                                 <input type="text" class="form-control" id="inputStreetOff" placeholder="Street Address" style="border-color: #3498db;">
+                                 <label for="inputStreetOff">Street Address</label>
+                                 <small id="invalidStreetOff" class="text-danger" hidden>
+                                 Please enter an address.
+                                 </small>
+                              </div>
+                              <div class="form-floating col-12 col-sm-6 col-md-6 col-lg-6" style="padding:5px;">
+                                 <input type="text" class="form-control" id="inputNeighOff" placeholder="Neighbourhood" style="border-color: #3498db;">
+                                 <label for="inputNeighOff">Neighbourhood (Optional)</label>								
+                              </div>
+                              <!--Fourth row-->                       
+                              <div class="form-group col-12 col-sm-6 col-md-6 col-lg-6" style=" padding:5px;">
+                                 <div class="form-floating">
+                                    <select class="form-select" id="inputCityOff" aria-label="Floating label" style="border-color: #3498db;">
+                                       <option disabled selected value> -Please select a city- </option>
+                                       <option>Moncton</option>
+                                       <option>Saint John</option>
+                                       <option>Fredericton</option>
+                                       <option>Other</option>
+                                    </select>
+                                    <label for="inputCityOff">City</label>
+                                 </div>
+                                 <small id="invalidCityOff" class="text-danger" hidden>
+                                 Please select a city.
+                                 </small>
+                              </div>
+                              <div class="form-floating col-12 col-sm-6 col-md-6 col-lg-6" style="padding:5px;">
+                                 <input type="text" class="form-control" id="inputPostalOff" placeholder="Postal Code" style="border-color: #3498db;">
+                                 <label for="inputPostalOff">Postal Code</label>
+                                 <small id="invalidPostalOff" class="text-danger" hidden>
+                                 Please enter a valid postal code.
+                                 </small>
+                              </div>
+                              <!--General text area-->
+                              <p class="text-primary" style= "text-align: center; padding-top: 1rem;">**If you have any additional information you would like to share before our walkthrough, please let us know below.**</p>
+                              <div class="form-group col-12 col-sm-12 col-md-12 col-lg-12" style ="padding-bottom:1rem;">						 
+                                 <textarea class="form-control" id="cleaningSpecificsOff" rows="5"></textarea>
+                              </div>
+                              <h5>Walkthrough Required.</h5>
+                           </div>
+                        </div>
+                        <h4 class="card-title" style= "text-align: left; padding-top: 1rem; border-top: 1px solid #ff7500;">Days and Times</h4>
+                        <p class="text-muted">We cannot guarantee any day or time, but please select a time frame that is optimal for you.</p>
+                        <fieldset class="form-group" style=" display: flex; flex-wrap: wrap; padding-bottom:15px; justify-content: center;">
+                           <div class ="d-flex justify-content-center">
+                              <div class="col-xs-1">
+                                 <div class="col-xs-6">
+                                    <div class="form-check">
+                                       <input class="form-check-input" type="checkbox" value="" id="monday">
+                                       <label class="form-check-label" for="monday" style="padding-right:7px;">
+                                       Monday
+                                       </label>
+                                    </div>
+                                    <div class="form-check">
+                                       <input class="form-check-input" type="checkbox" value="" id="tuesday">
+                                       <label class="form-check-label" for="tuesday" style="padding-right:7px;">
+                                       Tuesday
+                                       </label>
+                                    </div>
+                                    <div class="form-check">
+                                       <input class="form-check-input" type="checkbox" value="" id="wednesday">
+                                       <label class="form-check-label" for="wednesday" style="padding-right:7px;">
+                                       Wednesday
+                                       </label>
+                                    </div>
+                                 </div>
+                                 <div class="col-xs-6">
+                                    <div class="form-check">
+                                       <input class="form-check-input" type="checkbox" value="" id="thursday">
+                                       <label class="form-check-label" for="thursday" style="padding-right:7px;">
+                                       Thursday 
+                                       </label>
+                                    </div>
+                                    <div class="form-check">
+                                       <input class="form-check-input" type="checkbox" value="" id="friday">
+                                       <label class="form-check-label" for="friday" style="padding-right:7px;">
+                                       Friday
+                                       </label>                           
+                                    </div>
+                                    <div class="form-check">
+                                       <input class="form-check-input" type="checkbox" value="" onclick="weekendNotice()" id="saturday">
+                                       <label class="form-check-label" for="saturday" style="padding-right:7px;">
+                                       Saturday
+                                       </label>
+                                    </div>
+                                 </div>
+                                 <div class="col-xs-6">
+                                    <div class="form-check">
+                                       <input class="form-check-input" type="checkbox" value="" onclick="weekendNotice()" id="sunday">
+                                       <label class="form-check-label" for="sunday" style="padding-right:7px;">
+                                       Sunday
+                                       </label>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </fieldset>
+                        <!--Weekend warning-->
+                        <div style ="width: 100%; text-align:center; padding-bottom:1rem;">
+                           <small id="weekendWarning" class="text-info" hidden>
+                           <strong>Please note: weekends are less likely to be available for cleaning.</strong><br>  
+                           </small>
+                           <small id="invalidDay" class="text-danger" style="padding-top:1rem; text-align:center;" hidden>
+                           Please select at least one day of the week to give us a better idea of when you're available. 
+                           </small>
+                        </div>
+                        <!--Time-->
+                        <fieldset style="text-align:center; padding-bottom:1rem;">
+                           <div class="btn-group" role="group" style="display: flex; flex-wrap: wrap; padding-bottom: 1.2rem;" aria-label="Basic radio toggle button group">		
+                              <input type="checkbox" class="btn-check" id="morning" autocomplete="off">
+                              <label class="btn btn-outline-primary" for="morning">Morning<img src="img/sunrise.png" alt="morning" style="margin-left:3px; width: 25px; height: 25px;" class="fade-in"></label><br>
+                              <input type="checkbox" class="btn-check" id="afternoon" autocomplete="off">
+                              <label class="btn btn-outline-primary" for="afternoon">Afternoon<img src="img/sunny.png" alt="afternoon" style="margin-left:3px; width: 25px; height: 25px;" class="fade-in"></label><br>		  
+                              <input type="checkbox" class="btn-check" onclick="weekendNoticeTwo()" id="evening" autocomplete="off">
+                              <label class="btn btn-outline-primary" for="evening">Evening<img src="img/half-moon.png" alt="evening" style="margin-left:3px; width: 25px; height: 25px;" class="fade-in"></label><br>
+                           </div>
+                           <!--Weekend warning-->
+                           <small id="weekendWarningTwo" class="text-info" style="padding-top:1rem;" hidden>
+                           <strong>Please note: evenings are less likely to be available for cleaning.</strong><br>  
+                           </small>
+                           <small id="invalidTime" class="text-danger" style="padding-top:1rem; text-align:center;" hidden>
+                           Please select at least one time frame to give us a better idea of when you're available. 
+                           </small>							   
+                        </fieldset>
+                        <!--How often-->
+                        <h4 class="card-title" style= "text-align: left; padding-top: 1rem; border-top: 1px solid #ff7500;">How often would you require services?</h4>
+                        <p class="text-muted">Please select one of the options below.</p>
+                        <div class="btn-group" role="group" style="display: flex; flex-wrap: wrap; padding-bottom: 1.2rem;" aria-label="Basic radio toggle button group">
+                           <div class="container">
+                              <div class="row">
+                                 <div class="col-sm-6">
+                                    <input type="radio" class="btn-check"  name="btnradioClean" id="oneTime" autocomplete="off">
+                                    <label class="btn btn-outline-primary" for="oneTime" style="width:100%; margin-bottom: 0.5rem;">One Time Cleaning</label>
+                                    <input type="radio" class="btn-check" name="btnradioClean" id="biweek" autocomplete="off">
+                                    <label class="btn btn-outline-primary" for="biweek" style="width: 100%; margin-bottom: 0.5rem;">Bi-weekly Cleaning</label>
+                                 </div>
+                                 <div class="col-sm-6">						   
+                                    <input type="radio" class="btn-check" name="btnradioClean" id="weekly" autocomplete="off">
+                                    <label class="btn btn-outline-primary" for="weekly" style="width:100%; margin-bottom: 0.5rem;">Weekly Cleaning</label>
+                                    <input type="radio" class="btn-check" name="btnradioClean" id="triweek" autocomplete="off">
+                                    <label class="btn btn-outline-primary" for="triweek" style="width:100%; margin-bottom: 0.5rem;">Tri-weekly Cleaning</label>
+                                 </div>
+                              </div>
+                              <div class="row" style="justify-content: space-around; text-align:center;">
+                                 <div class="col-sm-6">                                 					   
+                                    <input type="radio" class="btn-check" name="btnradioClean" id="monthly" autocomplete="off">
+                                    <label class="btn btn-outline-primary" for="monthly" style="width:100%; margin-bottom: 0.5rem;">Monthly Cleaning</label> 
+                                    <small id="invalidOften" class="text-danger" style="text-align:center;" hidden>
+                                    Please select one of the options.
+                                    </small>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <!--General Questions-->
+                        <h4 class="card-title" style= "text-align: left; padding-top: 1rem; border-top: 1px solid #ff7500;">Questions?</h4>
+                        <p class="text-muted" style= "text-align: left; padding-top: 1rem;">If you have any general questions or comments, please let us know!</p>
+                        <div class="form-group" style ="padding-bottom:15px;">						 
+                           <textarea class="form-control" id="commentQuestion" rows="5"></textarea>
+                        </div>
+                        <p class="text-muted" style= "text-align: left; padding-top: 1rem; border-top: 1px solid #ff7500;">Please allow 24-48 hours for a response.</p>
+                        <div class="d-grid gap-2">                           	   
+                           <button type="submit" class="btn btn-lg btn-warning" id="submitButton">Submit Your Request!</button>	
+                        </div>
+                     </form>
+                     <div class="container" id ="sending" style ="text-align: center;" hidden>
+                        <h2>Sending...</h2>
+                        <div class="spinner-border"></div>
+                     </div>
+                  </div>
+               </div>
+               <!--Estimation tool-->
+               <div class="card bg-light mb-3" style="max-width: 20rem; height: 32rem; position: -webkit-sticky; position: sticky; top: 100px;">
+                  <div class="card-body">
+                     <h3 class="card-title" style= "text-align: center;">Session Estimate</h3>
+                     <p class="text-muted" style="border-top: 1px solid #ff7500; padding-top:1rem;">Here, you can view the estimation of your cleaning session. <strong>Please note: we have 2 hour minimums on ALL cleans.</strong></p>
+                     <!--Estimation objects-->
+                     <!--HOUSE-->
+                     <div id = "houseSelected" style="padding-bottom:10px;" hidden>
+                        <h4><u>House Cleaning</u></h4>
+                        <div style=" display: flex; flex-wrap: wrap; margin-bottom:0.5rem;">
+                           <h6><img src="img/bedroom.png" alt="bed" style="width: 20px; height: 20px; margin-right:0.25rem;">Bedroom Count:  </h6>
+                           <h6 style="padding-left:5px;" id="bedroomCountText"></h6>
+                        </div>
+                        <div style=" display: flex; flex-wrap: wrap; margin-bottom:0.5rem;">
+                           <h6><img src="img/bathroom.png" alt="bath" style="width: 20px; height: 20px; margin-right:0.25rem;">Bathroom Count:</h6>
+                           <h6 style="padding-left:5px;" id="bathroomCountText"></h6>
+                        </div>
+                        <div style=" display: flex; flex-wrap: wrap; margin-bottom:0.5rem;">
+                           <h6><img src="img/kitchen.png" alt="kitchen" style="width: 20px; height: 20px; margin-right:0.25rem;">Kitchen Count:</h6>
+                           <h6 style="padding-left:5px;" id="kitchenCountText"></h6>
+                        </div>
+                        <div style=" display: flex; flex-wrap: wrap; margin-bottom:0.5rem;">
+                           <h6><img src="img/room.png" alt="common" style="width: 20px; height: 20px; margin-right:0.25rem;">Common Room Count:</h6>
+                           <h6 style="padding-left:5px;" id="commonCountText"></h6>
+                        </div>
+                        <div style=" display: flex; flex-wrap: wrap; margin-bottom:0.5rem;">
+                           <h6><img src="img/floors.png" alt="floor" style="width: 20px; height: 20px; margin-right:0.25rem;">Floor Count:</h6>
+                           <h6 style="padding-left:5px;" id="floorCountText"></h6>
+                        </div>
+                        <div style=" display: flex; flex-wrap: wrap; margin-bottom:0.5rem;">
+                           <h6><img src="img/basement.png" alt="basement" style="width: 20px; height: 20px; margin-right:0.25rem;">Basement Style:</h6>
+                           <h6 style="padding-left:5px;" id="basementCountText"></h6>
+                        </div>
+                     </div>
+                     <!--Maid-->                   
+                     <div id = "maidSelected" style="padding-bottom:10px;" hidden>
+                        <h5>Walkthrough Required.</h5>
+                     </div>
+                     <!--OFFICE-->
+                     <div id = "officeSelected" style="padding-bottom:10px;" hidden>
+                        <h5>Walkthrough Required.</h5>
+                     </div>
+                     <!--OFFICE-->
+                     <div id = "walkThroughNeeded" style="padding-bottom:10px;" hidden>
+                        <h5>Walkthrough Required.</h5>
+                     </div>
+                     <div style="display: flex; margin-left: auto; margin-right: auto; margin-bottom:1rem; position: absolute; bottom: 0; left: 0.05;">
+                        <h6 style="padding-right:.25rem;  margin-left: -1rem;">Est Time: </h6>
+                        <h6 class="text-warning" style="font-size: 18px;" id = "totalPriceText"></h6>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <script>
+         $(document).ready(function(){
+         $(window).scroll(function () {
+         if ($(this).scrollTop() > 50) {
+         	$('#back-to-top').fadeIn();
+         } else {
+         	$('#back-to-top').fadeOut();
+         }
+         });
+         // scroll body to 0px on click
+         $('#back-to-top').click(function () {
+         $('body,html').animate({
+         	scrollTop: 0
+         }, 400);
+         return false;
+         });
+         });
+      </script>
+      <script>
+         //fade in dropdown
+         $(document).ready(function(){
+          $('ul.navbar-nav.me-auto li.nav-item.dropdown').hover(function() {
+            $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn(100);
+          }, function() {
+            $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(100);
+          });  
+         });
+      </script>
+   </body>
+   <div class="footer-basic">
+      <footer>
+         <div class="social"><a href="https://www.facebook.com/iCleanNewBrunswick" target = "_blank"><i class="icon ion-social-facebook"></i></a></div>
+         <ul class="list-inline">
+            <li class="list-inline-item"><a href="join-our-team">Work With Us</a></li>
+            <li class="list-inline-item"><a href="cleaning-services-referral-program">Referral Program</a></li>
+            <li class="list-inline-item"><a href="our-team">Our Team</a></li>
+            <li class="list-inline-item"><a href="terms-and-conditions">Terms and Conditions</a></li>
+         </ul>
+         <p class="copyright">iClean © 2021</p>
+      </footer>
+   </div>
+   <script src="js/estimationScript.js"></script>
+   <script src="https://smtpjs.com/v3/smtp.js"></script>		
+   <!--Back to top-->   
+   <div class="col-xs-3 col-sm-3"> 
+      <a id="back-to-top" href="#" style=" position: fixed; bottom: 15px; right: 25px; display: none;" class="btn btn-primary back-to-top border-warning" role="button"><span class="d-none d-lg-block">Back To Top</span><img src="img/arrow-up.png" alt="quote" style="width:45px; height: 45px;  display: block; margin-left: auto; margin-right: auto;"><i class="fas fa-chevron-up"></i></a>
+   </div>
+   <!--Alert-->
+   <div class="myAlert-bottom alert alert-danger" style="display:none; position: fixed;
+      bottom: 0px;  left: 0;
+      margin: auto;
+      right: 0;
+      text-align: center;
+      z-index:2;">		 
+      <strong>Whoops!</strong> <u>Please ensure all required fields are correctly filled in.</u>
+   </div>
+</html>

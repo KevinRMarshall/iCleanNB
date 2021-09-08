@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <!-- Global site tag (gtag.js) - Google Analytics -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=UA-115153759-2"></script>
+      <script>
+         window.dataLayer = window.dataLayer || [];
+         function gtag(){dataLayer.push(arguments);}
+         gtag('js', new Date());
+         
+         gtag('config', 'UA-115153759-2');
+      </script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://bootswatch.com/5/flatly/bootstrap.css">
+      <link rel="stylesheet" href="https://bootswatch.com/5/flatly/bootstrap.min.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+      <link rel="stylesheet" href="style/additionalStyles.css">
+      <script src="https://bootswatch.com/_vendor/jquery/dist/jquery.min.js"></script>
+      <script src="https://bootswatch.com/_vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+      <link rel="icon" href="img/iClean_Logo_S.png" type="image/gif" sizes="16x16">
+      <title>Thank You!</title>
+   </head>
+   <body>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-primary" style ="font-size: 1.15rem;">
+         <div class="container-fluid">
+            <div class="logo-image">
+               <a href="https://icleannb.com/"><img src="img/iClean_Logo_S.png" alt="logo" class="img" style="width: 90px; height: 90px;"></a>
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarColor03">
+               <ul class="navbar-nav me-auto">
+                  <li class="nav-item">
+                     <a class="nav-link" href="book-cleaning-services">Book Now!</a>
+                  </li>
+                  <!--Dropdown-->
+                  <li class="nav-item dropdown">
+                     <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Cleaning Services</a>
+                     <div class="dropdown-menu">
+                        <a class="dropdown-item" href="maid-services"><img src="img/housekeeping.png" alt="maid" style="width:20px; height: 20px; margin-right: 0.5rem;">Maid Services</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="house-cleaning"><img src="img/house.png" alt="house" style="width:20px; height: 20px; margin-right: 0.5rem;">House Cleaning</a>	
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="office-cleaning"><img src="img/office.png" alt="office" style="width:20px; height: 20px; margin-right: 0.5rem;">Office Cleaning</a>                      	 
+                     </div>
+                  </li>
+                  <!--Dropdown-->
+                  <li class="nav-item dropdown">
+                     <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Locations</a>
+                     <div class="dropdown-menu">
+                        <a class="dropdown-item" href="saint-john-cleaning-service">Saint John</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="fredericton-cleaning-service">Fredericton</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="moncton-cleaning-service">Moncton</a>							
+                     </div>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="cleaning-services-gift-cards">Gift Cards</a>
+                  </li>
+               </ul>
+               <ul class="navbar-nav">
+                  <!--FAQ-->
+                  <li class="nav-item">
+                     <a class="nav-link" href="cleaning-services-faq">F.A.Q.<img src="img/question.png" alt="question" class="fade-in" style="width:40px; height: 40px; margin-left:0.5rem; position: relative; top: -3px;"></a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="#">Call Now: 506-378-2364 <img src="img/smartphone.png" alt="phone" class="fade-in" style="width:40px; height: 40px;"></a>
+                  </li>
+               </ul>
+            </div>
+         </div>
+      </nav>
+      <div class="jumbotron">
+         <div class="container">
+            <div class="picture">
+               <h1 style="text-align:center; margin-top: 2rem;" class="display-3">Thanks! <br>We will be in touch!</h1>
+               <h3 style="text-align:center" class="display-5">Please expect to hear back after 24-48 hours.</h3>
+               <img src="img/thank-you.png" alt="thanks" class="fade-in" style="margin-top: 1rem; margin-bottom: 1rem; width:300px; height: 300px; display: block; margin-left: auto; margin-right: auto;">
+               <div class="d-grid gap-2" style="padding-bottom:15px;">
+                  <a class="btn btn-lg btn-warning" href="https://icleannb.com/" style="margin-bottom: 1rem; width:50%; display: block; margin-left: auto; margin-right: auto;" role="button">Book To Home Page</a>
+               </div>
+            </div>
+         </div>
+      </div>
+      <script>
+         //fade in dropdown
+         $(document).ready(function(){
+          $('ul.navbar-nav.me-auto li.nav-item.dropdown').hover(function() {
+            $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn(100);
+          }, function() {
+            $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(100);
+          });  
+         });
+      </script>
+   </body>
+   <div class="footer-basic">
+      <footer>
+         <div class="social"><a href="https://www.facebook.com/iCleanNewBrunswick" target = "_blank"><i class="icon ion-social-facebook"></i></a></div>
+         <ul class="list-inline">
+            <li class="list-inline-item"><a href="join-our-team">Work With Us</a></li>
+            <li class="list-inline-item"><a href="cleaning-services-referral-program">Referral Program</a></li>
+            <li class="list-inline-item"><a href="our-team">Our Team</a></li>
+            <li class="list-inline-item"><a href="terms-and-conditions">Terms and Conditions</a></li>
+         </ul>
+         <p class="copyright">iClean © 2021</p>
+      </footer>
+   </div>
+</html>
